@@ -55,14 +55,14 @@ class MyHomePage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Get.to(SecondPage());
+                  Get.to(const SecondPage());
                 },
-                child: Text("Second Page")),
+                child: const Text("Second Page")),
             ElevatedButton(
                 onPressed: () {
                   controller.temaDegistir();
                 },
-                child: Text("Change Theme")),
+                child: const Text("Change Theme")),
             Obx(
               () => Text(
                 '${controller.sayacBesArti}',
@@ -73,26 +73,26 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   controller.sayacBesArttir();
                 },
-                child: Text("Sayacı Bes Arttır")),
+                child: const Text("Sayacı Bes Arttır")),
             ElevatedButton(
                 onPressed: () {
                   controller.sayacBesAzalt();
                 },
-                child: Text("Sayacı Bes Azalt")),
+                child: const Text("Sayacı Bes Azalt")),
             ElevatedButton(
                 onPressed: () {
                   Get.snackbar('Ramo', 'Burak');
                 },
-                child: Text("Getx Snackbar")),
+                child: const Text("Getx Snackbar")),
             ElevatedButton(
                 onPressed: () {
                   Get.defaultDialog(title: 'Burak Dialog', middleText: "RAMOOOO");
                 },
-                child: Text("Getx Dialog")),
+                child: const Text("Getx Dialog")),
             Text('hello'.tr),
             ElevatedButton(
                 onPressed: () {
-                  Get.updateLocale(Locale("tr", "TR"));
+                  Get.updateLocale(const Locale("tr", "TR"));
                 },
                 child: Text('dil'.tr)),
           ],
