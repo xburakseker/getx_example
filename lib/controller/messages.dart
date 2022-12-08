@@ -4,16 +4,16 @@ class Messages extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
-          'hello': 'Hello World',
-          'dil': 'language changed',
+          'hello': 'Hello Ramo',
+          'dil': 'Turist Ramo',
         },
         'de_DE': {
           'hello': 'Hallo Welt',
-          'dil': 'Hallo Welt',
+          'dil': 'Hallo Ramo',
         },
         'tr_TR': {
           'hello': 'Merhaba Ramo',
-          'dil': 'Ramo dili değişti',
+          'dil': 'Türk Ramo',
         }
       };
 }
