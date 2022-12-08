@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:getx_example/controller/controller.dart';
+import 'package:getx_example/controller/messages.dart';
 import 'package:getx_example/second_page.dart';
 
 void main() async {
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      translations: Messages(),
+      locale: Get.deviceLocale,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -75,6 +79,22 @@ class MyHomePage extends StatelessWidget {
                   controller.sayacBesAzalt();
                 },
                 child: Text("Sayacı Bes Azalt")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.snackbar('Ramo', 'Burak');
+                },
+                child: Text("Getx Snackbar")),
+            ElevatedButton(
+                onPressed: () {
+                  Get.defaultDialog(title: 'Burak Dialog', middleText: "RAMOOOO");
+                },
+                child: Text("Getx Dialog")),
+            Text('hello'.tr),
+            ElevatedButton(
+                onPressed: () {
+                  Get.updateLocale(Locale("tr", "TR"));
+                },
+                child: Text('dil'.tr)),
           ],
         ),
       ),
