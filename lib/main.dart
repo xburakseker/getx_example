@@ -59,6 +59,22 @@ class MyHomePage extends StatelessWidget {
                   controller.temaDegistir();
                 },
                 child: Text("Change Theme")),
+            Obx(
+              () => Text(
+                '${controller.sayacBesArti}',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  controller.sayacBesArttir();
+                },
+                child: Text("Sayacı Bes Arttır")),
+            ElevatedButton(
+                onPressed: () {
+                  controller.sayacBesAzalt();
+                },
+                child: Text("Sayacı Bes Azalt")),
           ],
         ),
       ),

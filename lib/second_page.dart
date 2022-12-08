@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
 import 'controller/controller.dart';
@@ -18,7 +16,7 @@ class SecondPage extends StatelessWidget {
             onTap: () {
               Get.back();
             },
-            child: SizedBox(
+            child: const SizedBox(
               width: 100,
               child: Icon(
                 Icons.arrow_back_ios_new,

@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 
 class Controller extends GetxController {
   RxInt sayac = 0.obs;
+  RxInt sayacBesArti = 10.obs;
   RxBool isDark = false.obs;
 
   GetStorage getStorage = GetStorage();
@@ -18,6 +19,14 @@ class Controller extends GetxController {
 
   sayacAzalt() {
     sayac.value--;
+  }
+
+  sayacBesArttir() {
+    sayacBesArti.value += 5;
+  }
+
+  sayacBesAzalt() {
+    sayacBesArti.value -= 5;
   }
 
   temaDegistir() {
